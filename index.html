@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taddeo Claudio Automobili | Nichelino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #000; scroll-behavior: smooth; }
+        
+        nav { 
+            background: #111; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid #fbc02d; 
+        }
+        .logo-text { font-weight: 700; font-size: 1.1rem; color: #fbc02d; text-transform: uppercase; letter-spacing: 1px; }
+        .btn-call { background: #fbc02d; color: #000; padding: 10px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 0.85rem; }
+
+        .hero { 
+            background: url('macchina.jpg') no-repeat center center; 
+            background-size: contain; 
+            height: 45vh; 
+            background-color: #000;
+        }
+
+        .section-title { padding: 50px 5% 20px; color: #fbc02d; text-align: center; }
+        .section-title h2 { font-size: 2.2rem; text-transform: uppercase; }
+        
+        .inventory-container { padding: 0 5% 40px; max-width: 1400px; margin: 0 auto; }
+        .car-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        
+        .car-card { background: #1a1a1a; border-radius: 12px; overflow: hidden; border: 1px solid #333; display: flex; flex-direction: column; }
+        .car-img { height: 200px; background: #000; display: flex; align-items: center; justify-content: center; position: relative; }
+        .car-img img { max-width: 100%; max-height: 100%; object-fit: cover; width: 100%; }
+        .price-tag { position: absolute; top: 10px; right: 10px; background: #fbc02d; color: #000; padding: 5px 12px; font-weight: 800; border-radius: 5px; }
+        
+        .car-info { padding: 15px; color: white; flex-grow: 1; }
+        .car-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.75rem; border-top: 1px solid #333; padding-top: 10px; color: #fbc02d; }
+
+        .more-inventory { text-align: center; padding: 30px; background: #111; margin: 30px 0; border: 1px solid #fbc02d; border-radius: 15px; }
+        .more-inventory p { color: #fff; margin-bottom: 20px; }
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn-link { padding: 15px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; color: white; transition: 0.3s; }
+        .btn-fb { background: #1877F2; }
+        .btn-as { background: #ff4c00; }
+
+        .contact-section { padding: 50px 5%; background: #fff; display: flex; flex-wrap: wrap; gap: 30px; }
+        .contact-info { flex: 1; min-width: 300px; color: #111; }
+        .contact-info h2 { font-size: 2.2rem; margin-bottom: 20px; border-left: 6px solid #fbc02d; padding-left: 15px; }
+        .contact-info p { margin-bottom: 8px; font-size: 1.1rem; }
+        
+        .social-box { margin-top: 25px; display: flex; flex-direction: column; gap: 12px; }
+        .social-item { padding: 10px; background: #f9f9f9; border-radius: 8px; border: 1px solid #eee; }
+        .social-item strong { color: #333; display: block; margin-bottom: 4px; }
+        .social-item a { color: #fbc02d; text-decoration: none; font-weight: bold; }
+
+        .map-container { flex: 1.5; min-width: 300px; height: 400px; border-radius: 15px; overflow: hidden; border: 2px solid #111; }
+
+        footer { background: #111; color: #666; text-align: center; padding: 20px; border-top: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-text">Taddeo Claudio Automobili</div>
+        <a href="tel:0116800462" class="btn-call">CHIAMA ORA</a>
+    </nav>
+
+    <section class="hero"></section>
+
+    <div class="section-title"><h2>Le Nostre Auto</h2></div>
+
+    <section class="inventory-container">
+        <div class="car-grid">
+            <div class="car-card"><div class="car-img"><img src="fiat-500-2023.jpg"><div class="price-tag">€ 11.900</div></div><div class="car-info"><h4>Fiat 500 Hybrid</h4><div class="car-specs"><span>📅 2023</span><span>🛣️ 38.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="alfa-gt.jpg"><div class="price-tag">€ 6.000</div></div><div class="car-info"><h4>Alfa Romeo GT</h4><div class="car-specs"><span>📅 2004</span><span>🛣️ 126.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="scenic.jpg"><div class="price-tag">€ 2.900</div></div><div class="car-info"><h4>Renault Scenic</h4><div class="car-specs"><span>📅 2013</span><span>🛣️ 246.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="harley.jpg"><div class="price-tag">€ 10.000</div></div><div class="car-info"><h4>H-D 883R Cafe Racer</h4><div class="car-specs"><span>📅 2012</span><span>🛣️ 1.800 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="panda-4x4.jpg"><div class="price-tag">€ 5.900</div></div><div class="car-info"><h4>Fiat Panda 4x4</h4><div class="car-specs"><span>📅 2011</span><span>🛣️ 173.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="mercedes-a.jpg"><div class="price-tag">€ 2.500</div></div><div class="car-info"><h4>Mercedes A180</h4><div class="car-specs"><span>📅 2011</span><span>🛣️ 316.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="voyager-old.jpg"><div class="price-tag">€ 2.500</div></div><div class="car-info"><h4>Grand Voyager</h4><div class="car-specs"><span>📅 2005</span><span>🛣️ 198.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="punto-sporting.jpg"><div class="price-tag">€ 2.900</div></div><div class="car-info"><h4>Punto Sporting</h4><div class="car-specs"><span>📅 1998</span><span>🛣️ 100.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="trafic.jpg"><div class="price-tag">€ 34.900</div></div><div class="car-info"><h4>Renault Trafic 9 Posti</h4><div class="car-specs"><span>📅 2024</span><span>🛣️ 48.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="bmw-x1.jpg"><div class="price-tag">€ 23.000</div></div><div class="car-info"><h4>BMW X1 sDrive</h4><div class="car-specs"><span>📅 2022</span><span>🛣️ 37.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="audi-rs4.jpg"><div class="price-tag">€ 43.500</div></div><div class="car-info"><h4>Audi RS4 Avant</h4><div class="car-specs"><span>📅 2018</span><span>🛣️ 86.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="stelvio.jpg"><div class="price-tag">€ 18.000</div></div><div class="car-info"><h4>Alfa Romeo Stelvio</h4><div class="car-specs"><span>📅 2018</span><span>🛣️ 178.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="renegade.jpg"><div class="price-tag">€ 14.900</div></div><div class="car-info"><h4>Jeep Renegade</h4><div class="car-specs"><span>📅 2019</span><span>🛣️ 65.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="viano.jpg"><div class="price-tag">€ 12.500</div></div><div class="car-info"><h4>Mercedes Viano</h4><div class="car-specs"><span>📅 2011</span><span>🛣️ 379.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="mini.jpg"><div class="price-tag">€ 8.500</div></div><div class="car-info"><h4>MINI Clubman</h4><div class="car-specs"><span>📅 2016</span><span>🛣️ 218.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="mito.jpg"><div class="price-tag">€ 5.900</div></div><div class="car-info"><h4>Alfa Romeo MiTo</h4><div class="car-specs"><span>📅 2017</span><span>🛣️ 145.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="picanto.jpg"><div class="price-tag">€ 4.900</div></div><div class="car-info"><h4>Kia Picanto GPL</h4><div class="car-specs"><span>📅 2016</span><span>🛣️ 197.000 km</span></div></div></div>
+            <div class="car-card"><div class="car-img"><img src="meriva.jpg"><div class="price-tag">€ 4.500</div></div><div class="car-info"><h4>Opel Meriva</h4><div class="car-specs"><span>📅 2015</span><span>🛣️ 187.000 km</span></div></div></div>
+        </div>
+
+        <div class="more-inventory">
+            <p>E molto altro ancora... Scopri tutte le offerte aggiornate sui nostri portali ufficiali:</p>
+            <div class="btn-group">
+                <a href="https://www.facebook.com/ClaudioTaddeoAutomobili" target="_blank" class="btn-link btn-fb">Seguici su Facebook</a>
+                <a href="https://www.autoscout24.it/concessionari/taddeo-claudio-automobili" target="_blank" class="btn-link btn-as">Vedi su AutoScout24</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Contatti</h2>
+            <p>📍 <strong>Indirizzo:</strong> Via Torino 292/294, Nichelino (TO)</p>
+            <p>📞 <strong>Ufficio:</strong> 011 680 0462</p>
+            <p>📱 <strong>Cellulare:</strong> 338 395 0806</p>
+            
+            <div class="social-box">
+                <div class="social-item">
+                    <strong>Facebook:</strong>
+                    <a href="https://www.facebook.com/ClaudioTaddeoAutomobili" target="_blank">Claudio Taddeo Automobili</a>
+                </div>
+                <div class="social-item">
+                    <strong>AutoScout24:</strong>
+                    <a href="https://www.autoscout24.it/concessionari/taddeo-claudio-automobili" target="_blank">Taddeo Claudio Automobili</a>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.8491410141974!2d7.637582276537633!3d44.98734287106889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886c3109a06841%3A0xc391b86927d8f430!2sVia%20Torino%2C%20292%2C%2010042%20Nichelino%20TO!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer><p>© 2024 Taddeo Claudio Automobili | Nichelino</p></footer>
+
+</body>
+</html>
